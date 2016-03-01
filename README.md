@@ -2,7 +2,7 @@
 
 Projeto desenvolvido em 54 horas no Startup Weekend Natal 2015, O objetivo da aplicação é levar a experiência do usuário a clientes de bares e restaurantes, permitindo que realizem pedidos e pagamentos pelo celular.
 
-![ibPay]('http://s22.postimg.org/xx5cg0mnl/ibpay.png')
+<img src="http://s22.postimg.org/xx5cg0mnl/ibpay.png"/>
 
 ## Executar:
 
