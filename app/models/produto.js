@@ -6,6 +6,7 @@ module.exports = function(){
 	,	preco: {type: Number}
 	,	descricao: {type: String}
 	,	categoria: {type: String}
+	,	imagem: {type: String}
 	});
 
 	return mongoose.model('Produto', schema);

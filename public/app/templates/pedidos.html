@@ -1,7 +1,7 @@
 <ion-view view-title="Meus pedidos" ng-init="teste()">
 	<ion-content style="padding: 20px;">
 		<div class="titulo">
-			<h4>Minha Conta</h4> <h4 class="preco-produto">Total: R{{totalConta|currency:R$}}</h4>
+			<h4>Minha Conta</h4> <h4 class="preco-produto" ng-if="totalConta">Total: R{{totalConta|currency:R$}}</h4>
 		</div>
 		<hr>
   		<div class="list">

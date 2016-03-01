@@ -42,15 +42,9 @@ module.exports = function(app){
 	controller.getPedidoByUser = function(req, res){
 		Pedido.find({cliente: req.params.cliente, status: false}).populate('produto').exec()
 			.then(function(pedidos){
-				var total = null;
+				var total = 0;
 
-				console.log(pedidos.length);
-
-				for (var i = 0; i < pedidos.length; i++) {
-					total += pedidos[i].produto.preco * pedidos[i].quantidade;
-				};
-
-				res.json({total: total, pedidos: pedidos});
+				res.json({pedidos: pedidos});
 			}, function(error){
 				res.status(404).send({message: 'Falha ao listar seus pedidos. Tente novamente.'})
 			});

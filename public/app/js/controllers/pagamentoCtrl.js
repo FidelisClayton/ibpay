@@ -1,4 +1,4 @@
-angular.module('ibpay').controller('PagamentoCtrl', function($scope, $http, ApiService, $location, $timeout, $state, $ionicHistory){
+angular.module('ibpay').controller('PagamentoCtrl', function($scope, $http, ApiService, $location, $timeout, $state, $ionicHistory, $ionicPopup){
 	$scope.menuToggle = false;
 	$scope.pagando = false;
 	$scope.pagamentoSuccess = false;
@@ -39,8 +39,7 @@ angular.module('ibpay').controller('PagamentoCtrl', function($scope, $http, ApiS
 					$ionicHistory.nextViewOptions({
 						disableBack: true
 					});
-
-            		$state.go('app.cardapio', {categoria: 'Bebidas'})
+					$scope.showAlert();
 				}
 				console.log(response);
 			}, function(response){
@@ -72,8 +71,8 @@ angular.module('ibpay').controller('PagamentoCtrl', function($scope, $http, ApiS
             	$scope.data.card_hash = cardHash;
                 $http({
                 	method: 'post'
-            	,	url: 'http://ibpay.co/comprar'
-            	// ,	url: 'http://localhost:3000/comprar'
+            	// ,	url: 'http://ibpay.co/comprar'
+            	,	url: 'http://localhost:3000/comprar'
             	,	data: $scope.data
                 }).success(function(response){
                 	$scope.pagando = false;
@@ -84,7 +83,7 @@ angular.module('ibpay').controller('PagamentoCtrl', function($scope, $http, ApiS
 							disableBack: true
 						});
 
-                		$state.go('app.cardapio', {categoria: 'Bebidas'})
+                		$state.go('app.cardapio', {categoria: 'Bebidas'});
                 		//$location.path('app/cardapio/Bebidas');
                 	}, 2000)
                 }).error(function(response){
@@ -93,4 +92,15 @@ angular.module('ibpay').controller('PagamentoCtrl', function($scope, $http, ApiS
             });
         }
 	};
+
+	$scope.showAlert = function() {
+   		var alertPopup = $ionicPopup.alert({
+     		title: 'Ops',
+     		template: 'Função não implementada :(',
+     		scope: $scope
+   		});
+   		alertPopup.then(function(res) {
+			$state.go('app.cardapio', {categoria: 'Bebidas'});
+   		});
+ 	};
 })

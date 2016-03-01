@@ -1,0 +1,72 @@
+[
+	{
+		"nome": "Cappuccino fácil"
+	,	"preco": 10
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Bebidas"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/000/756/131263/131263_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Chocolate quente cremoso"
+	,	"preco": 15
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Bebidas"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/130/871/61385/61385_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Chocolate quente especial"
+	,	"preco": 18
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Bebidas"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/000/033/139577/139577_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Suco de caju com limão super refrescante"
+	,	"preco": 8
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Bebidas"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/087/015/25037/25037_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Cappuccino fácil"
+	,	"preco": 15
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Bebidas"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/000/756/131263/131263_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Batata frita com queijo e bacon"
+	,	"preco": 12
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Petiscos"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/032/143/216057/216057_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Bolinho de queijo"
+	,	"preco": 16
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Petiscos"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/002/082/59126/59126_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Misto quente de forno à minha moda"
+	,	"preco": 12
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Petiscos"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/138/603/100602/100602_original.jpg?mode=crop&width=370&height=278"
+	},
+	{
+		"nome": "Torta de liquidificador"
+	,	"preco": 18
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Petiscos"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/001/362/51917/51917_original.jpg?mode=crop&width=600&height=450"
+	},
+	{
+		"nome": "Petisco de soja torrada"
+	,	"preco": 8
+	,	"descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+,	"categoria": "Petiscos"
+	,	"imagem": "http://img.itdg.com.br/tdg/images/recipes/000/134/283/59490/59490_original.jpg?mode=crop&width=370&height=278"
+	}
+]
