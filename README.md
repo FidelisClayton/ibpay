@@ -11,7 +11,9 @@ Importe o arquivo "produtos.json" no banco "tablecash" e collection "produtos".
 ### 2. Deploy
 
 Instale as dependencias
+
   > npm install
+  
 Rode a aplicação
 
   > nodejs server.js
