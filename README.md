@@ -9,10 +9,12 @@ Projeto desenvolvido em 54 horas no Startup Weekend Natal 2015, O objetivo da ap
 ### 1. Importar o arquivo "produtos.json"
 Importe o arquivo "produtos.json" no banco "tablecash" e collection "produtos".
 ### 2. Deploy
+
 Instale as dependencias
-> npm install
+  > npm install
 Rode a aplicação
-> nodejs server.js
+
+  > nodejs server.js
 
 ### 3. Abra a aplicação
 Acesse localhost:3000/app para testar a aplicação
