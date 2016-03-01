@@ -1,0 +1,186 @@
+/* Cardápio*/
+ion-list.cardapio .item-complex .item-content{
+    height: 150px;
+    color: #fff;
+}   
+
+ion-list.cardapio .mask {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+ion-list.cardapio .titulo{
+	position: absolute;
+	z-index: 1;
+	font-size: 15pt;
+}
+
+.produto-thumb {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.produto-thumb img {
+    width: 100%;
+}
+
+/* Página do produto */
+.image-produto {
+    height: 180px;
+    overflow: hidden;
+}
+
+.image-produto img{
+    width: 100%;
+}
+
+.content{
+    padding: 20px;
+}
+
+.titulo{
+    display: flex;
+}
+
+.titulo h4{
+    width: 50%;
+    display: inline-block;
+}
+
+.titulo h4.preco-produto {
+    text-align: right;
+}
+
+/* Actionsheet */
+.platform-android .action-sheet-cancel {
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 96%;
+    text-align: center;
+}
+
+.platform-android .action-sheet-group .button {
+    border-width: 1px 0px 0px 0px;
+}
+
+.platform-android .action-sheet .button {
+    display: block;
+    padding: 1px;
+    width: 100%;
+    border-radius: 0;
+    border-color: #d1d3d6;
+    background-color: rgba(0, 0, 0, 0);
+    color: #007aff;
+    font-size: 21px;
+}
+
+.platform-android .action-sheet-group {
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.platform-android .action-sheet-group .button:first-child:last-child,
+.platform-android .action-sheet .action-sheet-title,
+.platform-android .action-sheet .button {
+    text-align: center;
+}
+
+.platform-android .action-sheet-group{
+    width: 96%;
+    margin: 0 auto 8px auto;
+}
+
+.platform-android .action-sheet-backdrop.active{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.platform-android .action-sheet .action-sheet-title {
+    font-size: 13px;
+    color: #8f8f8f;
+}
+
+.spinner svg{
+    display: block;
+    margin: 0 auto;
+}
+
+/* Informações do usuário */
+div.user-info{
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.profile-user{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: absolute;
+    left: 97.5px;
+    top: 10px;
+}
+
+.profile-user img{
+    width: 100%;
+}
+
+.data-user{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    z-index: 3;
+}
+
+.data-user p{
+    width: 100%;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.background-info{
+    overflow: hidden;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+}
+
+.background-info img{
+    width: 100%;
+}
+
+.background-info .mask{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+span.pedir{
+	position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 30px;
+    font-weight: normal;
+    font-size: 15pt;
+}

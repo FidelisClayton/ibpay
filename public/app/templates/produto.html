@@ -1,0 +1,34 @@
+<ion-view view-title="ibPay">
+  	<ion-content>	    
+	    <div id="produto">
+		    <div class="image-produto">
+		    	<img ng-src="{{produto.imagem}}" alt="">
+		    </div>
+
+			<div class="content">
+				<div class="titulo">
+					<h4>{{produto.nome}}</h4> <h4 class="preco-produto">R{{produto.preco|currency:R$}}</h4>
+				</div>
+				<hr>
+				<p>{{produto.descricao}}</p>
+
+				<div class="list">
+
+				  <div class="item range range-dark">
+				    <i class="icon ion-ios-wineglass-outline"></i>
+				    <input type="range" ng-model="pedido.quantidade" name="quantidade" min="0" max="10" value="1">
+				    <i class="icon ion-ios-wineglass"></i>
+				  </div>
+
+				</div>
+
+				<div class="row">
+					<button class="button col col-85 button-outline button-dark" ng-click="confirmar()">
+			  			Pedir {{pedido.quantidade}}
+					</button>
+				</div>
+				
+			</div>
+		</div>
+  	</ion-content>
+</ion-view>

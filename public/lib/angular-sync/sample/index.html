@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html ng-app="SampleApp">
+<head>
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <script type="text/javascript" src="angular/angular.js"></script>
+  <script type="text/javascript" src="angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="angular-sync.js"></script>
+  <script type="text/javascript" src="sample.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Angular-Sync</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Angular-Sync sample!</h1>
+      <p>Try to trigger requests and see counter incremented one by one !</p>
+    </div>
+    <div class="row" ng-controller="SampleController">
+      <div ng-repeat="v in verbs">
+        <div class="panel panel-default">
+          <div class="panel-heading">{{v}}</div>
+          <div class="panel-body">
+            <div>Nb Success: {{counters[v].nbSuccess}}</div>
+            <div>Nb Error: {{counters[v].nbError}}</div>
+            <div>
+              <button class="btn btn-primary" ng-click="triggerHttp(v)">Trigger with $http</button>
+              <button class="btn btn-primary" ng-click="triggerNgResource(v)">Trigger with $resource</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

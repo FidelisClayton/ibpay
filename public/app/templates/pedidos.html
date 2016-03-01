@@ -1,0 +1,16 @@
+<ion-view view-title="Meus pedidos" ng-init="teste()">
+	<ion-content style="padding: 20px;">
+		<div class="titulo">
+			<h4>Minha Conta</h4> <h4 class="preco-produto">Total: R{{totalConta|currency:R$}}</h4>
+		</div>
+		<hr>
+  		<div class="list">
+    		<a class="item item-thumbnail-left" href="#/app/produto/{{pedido.produto._id}}" ng-repeat="pedido in meusPedidos">
+	      		<img ng-src="{{pedido.produto.imagem}}">
+	      		<h2>{{pedido.quantidade}} x {{pedido.produto.nome}}</h2>
+	      		<p>Total: R{{pedido.quantidade * pedido.produto.preco | currency:R$}}</p>
+    		</a>
+		</div>
+	</ion-content>
+</div>
+</ion-view>

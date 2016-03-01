@@ -1,0 +1,57 @@
+<div class="mascara-geral" ng-click="menuToggle = false" ng-class="{'ocultarMascara': !menuToggle, 'mostrarMascara': menuToggle}"></div>
+<div class="mascara-geral" ng-click="menuPedir = false" ng-class="{'ocultarMascara': !menuPedir, 'mostrarMascara': menuPedir}"></div>
+<div class="mascara-geral" ng-click="menuPedidos = false" ng-class="{'ocultarMascara': !menuPedidos, 'mostrarMascara': menuPedidos}"></div>
+
+<div class="bar bar-header bar-positive">
+
+	<i class="material-icons right" ng-click="voltar(produto.categoria)" style="color: #F44336; font-size: 28pt; padding-top: 5pt;position: absolute;z-index: 5;">arrow_back</i>    <img class="menu-magnify" src="img/magnify.png" alt="">
+    <h1 class="title fab-left">
+      <img class="logo" src="img/ibpay_2.png" alt="">
+    </h1>
+</div>
+
+	<nav ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 49px; height: 33px; z-index: 1; position: absolute;">
+	    <div class="nav-wrapper" style="position: absolute; z-index: 5;">
+	      <div class="col s12" style="padding-top: 8px; padding-left: 10px;">
+	        <a href="#/categorias" class="breadcrumb">Categorias</a>
+	        <a href="#/cardapio/{{produto.categoria}}" class="breadcrumb">{{produto.categoria}}</a>
+	        <a class="breadcrumb">{{produto.nome}}</a>
+	      </div>
+	    </div>
+  	</nav>
+
+<ion-content ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 35px">
+	<div class="content has-header produto">
+		<div class="capa-produto">
+			<img src="{{produto.imagem}}">
+		</div>
+		
+		<div class="descricao-produto">
+			<h4 class="nome">{{produto.nome}}</h4>
+			<h5 class="preco">{{produto.preco | currency:R$}}</h3>
+			<p class="descricao">{{produto.descricao}}</p>
+
+			<p class="range-field">
+		      <input ng-model="pedido.quantidade" type="range" min="0" max="15"/>
+		    </p>
+			<a ng-click="pedir('abrir', pedido)" class="waves-effect waves-light btn btn-pedir"><i class="material-icons right">add_shopping_cart</i>Pedir {{pedido.quantidade}}</a>
+		</div>
+	</div>
+
+</ion-content>
+<div class="menu-bottom" ng-class="{'esconder-bottom-menu': !menuPedir, 'mostrar-bottom-menu':menuPedir}">
+	<span class="aviso">Você pediu {{pedido.quantidade}} {{produto.nome}}. Confirmar pedido?</span>
+	<span class="opcoes">
+		<a ng-click="pedir('cancelar')" class="btn-floating btn-medium waves-effect waves-light red cancelar"><i class="material-icons">not_interested</i></a>
+		<a ng-click="pedir('confirmar')" class="btn-floating btn-large waves-effect waves-light green confirmar"><i class="material-icons">check</i></a>
+	</span>
+</div>
+<a ng-show="!menuPedidos" ng-hide="menuPedidos" ng-click="menuPedidos = true; getPedidos(cliente._id)" class="btn-floating btn-large waves-effect waves-light red btn-carrinho"><i class="material-icons">shopping_cart</i></a>
+<div ng-show="menuPedidos" ng-hide="!menuPedidos" ng-class="{'mostrar-pedidos': menuPedidos}" class="btn-floating btn-large red btn-carrinho" style="z-index: 4">
+	<i ng-click="menuPedidos = false" style="font-size: 35pt" class="material-icons">arrow_drop_down</i>
+ 	<ul class="collection with-header meus-pedidos" style="margin-bottom: 50px;">
+        <li class="collection-header"><h4 style="display: inline-block; width: 50%;">Meus pedidos</h4><span style="display: inline-block; width: 50%; text-align: right;">Total: {{totalConta |currency:R$}}</span></li>
+
+        <li class="collection-item" style="display: flex;" ng-repeat="pedido in meusPedidos"> <span style="text-align: left; width: 50%; display: inline-block" >{{pedido.quantidade}} {{pedido.produto.nome}}</span> <span style="text-align: right; width: 50%; display: inline-block">{{pedido.produto.preco | currency:R$}}</span></li>
+	</ul>
+</div>

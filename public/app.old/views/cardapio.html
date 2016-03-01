@@ -1,0 +1,86 @@
+<aside class="menu-lateral" ng-class="{'esconder': !menuToggle, 'voltar': menuToggle}">
+	<div class="info-usuario">
+		<div class="profile-image">
+			<img ng-src="{{cliente.foto}}">
+		</div>
+		<div class="nome">{{cliente.nome}}</div>
+		<div class="estabelecimento">Ateliê bar e pesticaria</div>
+		<div class="capa"><img src="http://blog.tribunadonorte.com.br/aoponto/files/2012/10/08-07-201190JFS-Small.jpg"></div>
+	</div>
+
+	<ul class="collection with-header opcoes">
+        <a href="#/cardapio">
+        	<li class="collection-item active">
+        		<div>
+        			Cardápio<span class="secondary-content"><i class="material-icons">view_module</i></span>
+        		</div>
+        	</li>
+    	</a>
+        
+        <a href="#/pedidos">
+        	<li class="collection-item">
+        		<div>
+        			Meus pedidos<span class="secondary-content"><i class="material-icons">toc</i></span>
+    			</div>
+        	</li>
+    	</a>
+        
+        <a href="#/pagamento">
+            <li class="collection-item">
+                <div>
+                    Pagamento<span class="secondary-content"><i class="material-icons">credit_card</i></span>
+                </div>
+            </li>
+        </a>
+        
+        <a href="#/estabelecimento">
+        	<li class="collection-item">
+        		<div>
+        			Sobre o estabelecimento<span class="secondary-content"><i class="material-icons">room</i></span>
+        		</div>
+    		</li>
+    	</a>
+
+  	</ul>
+</aside>
+
+<div class="mascara-geral" ng-click="menuToggle = false" ng-class="{'ocultarMascara': !menuToggle, 'mostrarMascara': menuToggle}"></div>
+
+<div class="bar bar-header bar-positive">
+
+	<div id="nav-icon2" ng-click="menuToggle = !menuToggle" ng-class="{'open':menuToggle}">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+
+<!--    <img class="menu-magnify" src="img/magnify.png" alt="">-->
+    <h1 class="title fab-left">
+      <img class="logo" src="img/ibpay_2.png" alt="">
+    </h1>
+</div>
+
+    <nav ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 49px; height: 33px; z-index: 1; position: absolute;">
+	    <div class="nav-wrapper" style="position: absolute; z-index: 5;">
+        <div class="col s12" style="padding-top: 8px; padding-left: 10px;">	        <a href="#/categorias" class="breadcrumb">Categorias</a>
+	        <a href="" class="breadcrumb">{{categoria}}</a>
+	      </div>
+	    </div>
+  	</nav>
+
+<ion-content ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 35px">
+    <div class="content has-header">
+	    <div class="bloco" ng-repeat="produto in cardapio | filter:busca">
+	     <!-- <div ng-click="redirecionar(produto._id)" class="mascara"></div> -->
+	      <h2>{{produto.nome}}</h2>
+	      <p>{{produto.preco |currency:R$}}</p>
+	      <a class="pedir" href="#/produto/{{produto._id}}">Detalhes</a>
+	      <a class="visualizar" href="" ng-click="fazerPedido(produto._id)">Pedir</a> <img class="visualizar-icon" src="img/check.png" alt="">
+	      <img class="produto" ng-src="{{produto.imagem}}" alt="">
+	    </div>
+	</div>
+</ion-content>
+

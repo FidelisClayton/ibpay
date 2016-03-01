@@ -1,0 +1,84 @@
+<aside class="menu-lateral" ng-class="{'esconder': !menuToggle, 'voltar': menuToggle}">
+	<div class="info-usuario">
+		<div class="profile-image">
+			<img ng-src="{{cliente.foto}}">
+		</div>
+		<div class="nome">{{cliente.nome}}</div>
+		<div class="estabelecimento">Ateliê bar e pesticaria</div>
+		<div class="capa"><img src="http://blog.tribunadonorte.com.br/aoponto/files/2012/10/08-07-201190JFS-Small.jpg"></div>
+	</div>
+
+	<ul class="collection with-header opcoes">
+        <a href="#/categorias">
+        	<li class="collection-item active">
+        		<div>
+        			Cardápio<span class="secondary-content"><i class="material-icons">view_module</i></span>
+        		</div>
+        	</li>
+    	</a>
+        
+        <a href="#/pedidos">
+        	<li class="collection-item">
+        		<div>
+        			Meus pedidos<span class="secondary-content"><i class="material-icons">toc</i></span>
+    			</div>
+        	</li>
+    	</a>
+        
+        <a href="#/pagamento">
+            <li class="collection-item">
+                <div>
+                    Pagamento<span class="secondary-content"><i class="material-icons">credit_card</i></span>
+                </div>
+            </li>
+        </a>
+        
+        <a href="#/estabelecimento">
+        	<li class="collection-item">
+        		<div>
+        			Sobre o estabelecimento<span class="secondary-content"><i class="material-icons">room</i></span>
+        		</div>
+    		</li>
+    	</a>
+
+  	</ul>
+</aside>
+
+<div class="mascara-geral" ng-click="menuToggle = false" ng-class="{'ocultarMascara': !menuToggle, 'mostrarMascara': menuToggle}"></div>
+
+<div class="bar bar-header bar-positive">
+
+	<div id="nav-icon2" ng-click="menuToggle = !menuToggle" ng-class="{'open':menuToggle}">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+
+    <img class="menu-magnify" src="img/magnify.png" alt="">
+    <h1 class="title fab-left">
+      <img class="logo" src="img/ibpay_2.png" alt="">
+    </h1>
+</div>
+
+<ion-content ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 5px">
+    
+    <div ng-click="redirecionar('Bebidas')" class="content has-header">
+        <div class="bloco">
+          <div class="mascara"></div>
+          <h2 ng-class="centralizado">Bebidas</h2>
+          <img class="produto" src="http://www.curtabalada.com.br/wp-content/uploads/2014/12/drinks.jpg">
+        </div>
+    </div>
+
+    <div ng-click="redirecionar('Petiscos')" class="content has-header">
+        <div class="bloco">
+          <div class="mascara"></div>
+          <h2 ng-class="centralizado">Petiscos</h2>
+          <img class="produto" src="http://www.ingressocarnaval.com.br/wp-content/uploads/2014/05/melhores-petiscos-10.jpg">
+        </div>
+    </div>
+</ion-content>
+

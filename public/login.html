@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LOGIN - SGI</title>
+		<meta name="description" content="">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+	<div id="area-de-login">
+		<div class="ui segment">
+			<div class="ui vertically divided grid">
+				<div class="ten apptoppanelcolumn  row">
+					<div class="two wide column">
+						<img class="ui image" src="img/logo_pmp.png">
+					</div>
+					<div class="nine wide column">
+						<h2 class="ui dividing header">Prefeitura Municipal de
+							Parnamirim</h2>
+						<p></p>
+						<div class="ui text menu">
+							<div class="header item">
+								&nbsp;Portal Administrativo<i class="angle right icon"></i>&nbsp;&nbsp;Cadastro
+								de Recursos
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="form-de-login">
+			<form name="form"  role="form"  autocomplete="off">
+				 <div class="ui three column grid">
+					<div class="column"></div>
+					<div class="column">
+						<div class="ui fluid form segment">
+							<h2 class="ui header">Log-in</h2>
+							<div class="field" ng-class="{ 'error': form.matricula.$dirty && form.matricula.$error.required || error}">
+								<label>Matrícula</label> 
+								<input name="matricula" id="matricula" type="text" ng-model="usuario.matricula" required ui-br-cnpj-mask>
+								<span ng-show="form.matricula.$dirty && form.matricula.$error.required" class="help-block">Matrícula deve ser preenchida</span>
+							</div>
+							<div class="field" ng-class="{ 'error': form.senha.$dirty && form.senha.$error.required || error }">
+								<label>Senha</label>
+								<input id="senha" name="senha" type="password" ng-model="usuario.senha" required>
+								<span ng-show="form.senha.$dirty && form.senha.$error.required" class="help-block">Senha deve ser preenchida</span>
+							</div>
+							<button ng-click="registrar()" type="submit" id="botao-de-submissao" class="ui blue submit button"  ng-class="{'disabled': usuario.matricula==null || usuario.senha==null || usuario.matricula.length<=4 || usuario.senha.length<=4}" >Login</button>
+							<div ng-if="enviando" class="ui active small inline loader"></div>
+						</div>
+					</div>
+					<div class="column"></div>
+				</div>
+				<div class="ui two column centered grid">
+					<div class="column" >
+						<div ng-show="error" class="ui negative message transition">
+							<div class="header">
+							    {{error}}
+							</div>
+							<p></p>
+						</div>
+					</div>						
+				</div>
+			</form>		
+</body>
+</html>

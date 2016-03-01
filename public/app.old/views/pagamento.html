@@ -1,0 +1,159 @@
+<aside class="menu-lateral" ng-class="{'esconder': !menuToggle, 'voltar': menuToggle}">
+	<div class="info-usuario">
+		<div class="profile-image">
+			<img ng-src="{{cliente.foto}}">
+		</div>
+		<div class="nome">{{cliente.nome}}</div>
+		<div class="estabelecimento">Ateliê bar e pesticaria</div>
+		<div class="capa"><img src="http://blog.tribunadonorte.com.br/aoponto/files/2012/10/08-07-201190JFS-Small.jpg"></div>
+	</div>
+
+	<ul class="collection with-header opcoes">
+        <a href="#/cardapio">
+        	<li class="collection-item">
+        		<div>
+        			Cardápio<span class="secondary-content"><i class="material-icons">view_module</i></span>
+        		</div>
+        	</li>
+    	</a>
+        
+        <a href="#/pedidos">
+        	<li class="collection-item">
+        		<div>
+        			Meus pedidos<span class="secondary-content"><i class="material-icons">toc</i></span>
+    			</div>
+        	</li>
+    	</a>
+        
+        <a href="#/pagamento">
+        	<li class="collection-item active">
+        		<div>
+                    Pagamento<span class="secondary-content"><i class="material-icons">credit_card</i></span>
+    			</div>
+        	</li>
+    	</a>
+        
+        <a href="#/estabelecimento">
+        	<li class="collection-item">
+        		<div>
+        			Sobre o estabelecimento<span class="secondary-content"><i class="material-icons">room</i></span>
+        		</div>
+    		</li>
+    	</a>
+
+  	</ul>
+</aside>
+
+<div class="mascara-geral" ng-click="menuToggle = false" ng-class="{'ocultarMascara': !menuToggle, 'mostrarMascara': menuToggle}"></div>
+<div class="mascara-geral" ng-click="pagando = false" ng-class="{'ocultarMascara': !pagando, 'mostrarMascara': pagando}"></div>
+
+<div class="bar bar-header bar-positive">
+
+	<div id="nav-icon2" ng-click="menuToggle = !menuToggle" ng-class="{'open':menuToggle}">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+
+    <img class="menu-magnify" src="img/magnify.png" alt="">
+    <h1 class="title fab-left">
+      <img class="logo" src="img/ibpay_2.png" alt="">
+    </h1>
+</div>
+
+    <nav ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 49px; height: 33px; z-index: 1; position: absolute;">
+	    <div class="nav-wrapper" style="position: absolute; z-index: 5;">
+        <div class="col s12" style="padding-top: 8px; padding-left: 10px;">	        
+        	<a href="#/categorias" class="breadcrumb">Categorias</a>
+	        <a href="" class="breadcrumb">Pagamento</a>
+	      </div>
+	    </div>
+  	</nav>
+
+	<div ng-if="pagando" class="preloader-wrapper big active centralizado">
+	    <div class="spinner-layer spinner-red-only">
+	      	<div class="circle-clipper left">
+	        	<div class="circle"></div>
+	      	</div>
+
+	      	<div class="gap-patch">
+	        	<div class="circle"></div>
+	      	</div>
+
+	      	<div class="circle-clipper right">
+	        	<div class="circle"></div>
+	      	</div>
+	    </div>
+  	</div>
+
+<ion-content ng-class="{'retomar': !menuToggle, 'afastar': menuToggle}" style="margin-top: 35px">
+    <div class="content has-header">
+
+	    <div class="row" ng-if="!pagamentoSuccess">
+		    <form class="col s12">
+		    	<div class="row">
+    		    	<div class="input-field cold s12" style="display: flex; width: 100%;">
+    		    		<h4 style="width: 50%;">Pagamento</h4> <h4 style="font-weight: bold; text-align: right; width: 50%;">Total: {{totalConta | currency:R$}}</h4>
+    		    	</div>
+		    	</div>
+		      	<div class="row">
+			        <div class="input-field col s6">
+			          	<input id="card_number" type="number" ng-model="pagamento.card_number" class="validate">
+			          	<label for="card_number">Número do cartão</label>
+		        	</div>
+
+		        	<div class="input-field col s6">
+			          	<input id="card_holder_name" type="text" ng-model="pagamento.card_holder_name" class="validate">
+			          	<label for="card_holder_name">Nome no cartão</label>
+		        	</div>
+
+		      	</div>
+
+		      	<div class="row">
+			        <div class="input-field col s6">
+			          	<input id="card_expiration_month" type="number" ng-model="pagamento.card_expiration_month" class="validate">
+			          	<label for="card_expiration_month">Mês do vencimento</label>
+		        	</div>
+
+		        	<div class="input-field col s6">
+			          	<input id="card_expiration_year" type="number" ng-model="pagamento.card_expiration_year" class="validate">
+			          	<label for="card_expiration_year">Ano do vencimento</label>
+			        </div>
+		      	</div>
+
+	      		<div class="row">
+		        	<div class="input-field col s12">
+			          	<input id="card_cvv" type="number" class="validate" ng-model="pagamento.card_cvv">
+			          	<label for="card_cvv">Código de segurança</label>
+		        	</div>
+		      	</div>
+
+		      	<div class="row" ng-if="!pagando">
+		      		<div class="input-field col s12">
+		      			<a class="waves-effect waves-light btn" style="background-color: #EE6E73;" ng-click="pagar()">Pagar</a>
+		      		</div>
+		      	</div>
+		    </form>
+	  	</div>
+	</div>
+</ion-content>
+
+	<!-- 
+    Número do cartão: <input type="text" ng-model="pagamento.card_number" id="card_number" value="5900720080344446"/>
+    <br/>
+    Nome (como escrito no cartão): <input type="text" ng-model="pagamento.card_holder_name"/>
+    <br/>
+    Mês de expiração: <input type="text" ng-model="pagamento.card_expiration_month"/>
+    <br/>
+    Ano de expiração: <input type="text" ng-model="pagamento.card_expiration_year"/>
+    <br/>
+    Código de segurança: <input type="text" ng-model="pagamento.card_cvv"/>
+    <br/>
+    <div id="field_errors">
+    </div>
+    <br/>
+    <button ng-click="pagar()">Pagar</button>
+ -->

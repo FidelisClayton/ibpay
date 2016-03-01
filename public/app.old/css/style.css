@@ -1,0 +1,512 @@
+.bar.bar-header .button+.title {
+    text-align: left;
+    left: 65px;
+    line-height: 53px;
+}
+
+.bar.bar-header.bar-positive {
+    height: 50px;
+    background-color: #FFFFFF;
+    position: fixed;
+}
+
+button.button.button-icon.icon.ion-navicon.flat.activated {
+    margin-top: 5px;
+}
+
+button.button.button-icon.icon.ion-navicon.flat {
+    margin-top: 5px;
+}
+
+.bar.bar-positive {
+    border-color: #0c63ee;
+    background-color: #3F51B5;
+    background-image: linear-gradient(0deg, #0c63ee, #0c63ee 50%, rgba(0, 0, 0, 0) 50%);
+    color: #fff;
+}
+
+.bloco {
+    height: 150px;
+    overflow: hidden;
+    /* background-color: #000; */
+    margin-bottom: 5px;
+}
+
+.bloco h2 {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #FFF;
+    z-index: 2;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.50);
+    font-weight: bold;
+}
+
+.bloco p {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 10px;
+    z-index: 2;
+    color: #FFF;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.95);
+}
+
+.bloco img.produto {
+    width: 100%;
+    height: auto;
+    -webkit-filter: grayscale(0.5);
+    -o-filter: grayscale(0.5);
+    filter: grayscale(0.5);
+}
+
+.mascara {
+    background-color: #000;
+    width: 100%;
+    /* height: 80%; */
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+    height: 150px;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.bloco a.visualizar {
+    font-size: 13pt;
+    font-weight: bold;
+    position: absolute;
+	z-index: 1;
+	color: white;
+	margin-top: 120px;
+	right: 40px;
+	text-decoration: none;
+}
+
+img.visualizar-icon {
+    position: absolute;
+    z-index: 1;
+    height: 22px;
+    /* width: 32px; */
+    right: 15px;
+	margin-top: 120px
+}
+
+img.pedir-icon{
+    position: absolute;
+    z-index: 1;
+    height: 22px;
+    left: 77px;
+    margin-top: 120px;
+}
+
+a.pedir{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    text-decoration: none;
+    left: 15px;
+    margin-top: 120px;
+}
+
+.item-md-label input.login-form {
+    width: 93%;
+}
+
+.login-fb{
+    position: relative;
+    height: 40px;
+    left: 50%; 
+    margin-left: -82.5px;
+}
+
+button.login{
+    width: 93% !important;
+    height: 10px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+img.backgr{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+}
+
+div.form{
+    padding-top: 20px;
+}
+
+.logo{
+    height: 38px;
+    margin-top: 8px;
+    /* margin: 0 auto; */
+    margin-left: 15px;
+}
+
+.menu-icon{
+    width: 32px !important;
+    height: 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 4;
+}
+
+.menu-magnify{
+    width: 32px !important;
+    height: 32px;
+    margin-top: 10px;
+    position: absolute;
+    right: 15px
+}
+
+#logo{
+    height: 150px;menu-lateral esconder
+    margin-left: 60px;
+}
+
+.filtro {
+    width: 100%;
+    position: absolute;
+    height: 130%;
+    background-color: rgba(237, 204, 219, 0.16);
+    top: 0;
+    z-index: -1;
+}
+
+aside.menu-lateral{
+    width: 250px;
+    height: 100%;
+    margin-top: 50px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 3;
+    box-shadow: 0px 10px 10px 1px #313131;
+    transition: 0.3s ease all;
+}
+
+.esconder{
+    transform: translateX(0);
+    transition: 0.3s ease all;
+}
+
+.voltar{
+    transform: translateX(100%);
+    transition: 0.3s ease all !important;
+}
+
+.retomar{
+    transform: translateX(0);
+    transition: 0.3s ease all !important;
+}
+
+.afastar{
+    transform: translateX(250px);
+    transition: 0.3s ease all !important;
+    transition-delay: 0.2s;
+}
+
+.mostrarMascara{
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+    transition: 0.4s ease all;
+}
+
+.ocultarMascara{
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: 0.4s ease all;
+}
+
+.mascara-geral{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+
+}
+
+.menu-lateral .opcoes{
+    position: relative;
+    top: -8px;
+    width: 100%;
+}
+
+.info-usuario{
+    height: 130px;
+    overflow: hidden;
+}
+
+.profile-image{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    background-color: #000;
+    margin-top: 5px;
+    border-radius: 50px;
+}
+
+.profile-image img{
+    width: 100%;
+}
+
+.nome, .estabelecimento, .profile-image{
+    margin-left: 10px;
+    color: white;
+}
+
+.info-usuario .capa{
+    width: 100%;
+    position: absolute;
+    height: 130px;
+    overflow: hidden;
+    top: 0;
+    z-index: -1;
+}
+
+.info-usuario .capa img{
+    width: 100%;
+    -webkit-filter: grayscale(90%);
+    -o-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+.collection .collection-item.active {
+    background-color: #C83E3E;
+}
+
+.secondary-content {
+    /*float: left;*/
+    color: #C83E3E;
+}
+
+.bar{
+    box-shadow: none !important;
+}
+
+.capa-produto{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.capa-produto img{
+    width: 100%;
+}
+
+.produto h5.preco, .produto p.descricao{
+    color: black;
+}
+
+.produto h4.nome{
+    color: black;
+    display: inline-block;
+    font-size: 18pt;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.produto h5.preco{
+    display: inline-block;
+    font-size: 12pt;
+}
+
+.btn-carrinho{
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    bottom: 10px;
+}
+
+.descricao-produto{
+    padding: 0 20px 0 20px;
+}
+
+.btn-pedir{
+    float: right;
+    background-color: #F44336;
+    margin-bottom: 30px;
+}
+
+.produto{
+    margin-bottom: 50px;
+}
+
+.toast-text{
+    padding: 5px; 
+    width: 100%;
+}
+
+.menu-bottom{
+    padding: 0px 20px 20px 20px;
+    background-color: #3F3F3F;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    z-index: 2;
+    color: #FFF;
+}
+
+.menu-bottom .aviso{
+    font-size: 12pt;
+    width: 50%;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.menu-bottom .opcoes{
+    width: 50%;
+    float: right;
+    display: inline-block;
+    margin-top: 8px;
+    padding-left: 25px;
+}
+
+/*Mostrar menu inferior*/
+.mostrar-bottom-menu{
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+
+.esconder-bottom-menu{
+    -webkit-transform: translateY(75px);
+    -ms-transform: translateY(75px);
+    -o-transform: translateY(75px);
+    transform: translateY(75px);
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+
+.subir-content{
+    transform: translateY(-75px);
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+
+.descer-content{
+    transform: translateY(0px);
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+/*Fim animação menu inferior*/
+
+.menu-bottom .confirmar{
+    margin-bottom: 20px;
+}
+
+.menu-bottom .cancelar{
+    margin-right: 15px;
+}
+
+
+/* Animação mostrar meus pedidos */
+.mostrar-pedidos{
+    height: 50% !important;
+    width: 100% !important;
+    border-radius: 0;
+    margin-left: -10px;
+}
+/* Fim animação mostrar meus pedidos */
+.collection{
+    color: black;
+    text-align: left;
+    border: none;
+}
+
+.meus-pedidos li{
+    background-color: #F44336 !important;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid #FF5B4F !important;
+}
+
+.meus-pedidos li h4{
+    color: white;
+}
+
+.meus-pedidos{
+    margin-top: -25px;
+    height: 260px;
+    overflow: scroll;
+}
+
+span.image-pedido{
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+span.detalhes-pedido, span.preco-pedido, span.pedido-total-conta{
+    height: 50px;
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+span.image-pedido img{
+    height: 100%;
+    transform: translateX(0px);
+}
+
+.meus-pedidos2 li{
+    display: flex;
+}
+
+span.preco-pedido, span.pedido-total-conta{
+    position: absolute;
+    right: 15px;
+    font-weight: bold;
+}
+
+.menu-lateral a{
+    color: black !important;
+}
+
+.breadcrumb{
+    padding-top: 5px;
+    font-size: 11pt !important;
+}
+
+.breadcrumb:before{
+    margin: 0 -3px 0 -3px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    border-bottom: 2px solid #EE6E73
+}
+
+.centralizado{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    z-index: 5;
+}
+
+input[type=range]{
+    padding: 20px 0;
+}
